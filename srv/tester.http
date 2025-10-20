@@ -1,0 +1,96 @@
+### Get Service Metadata
+
+http://localhost:43405/odata/v4/CatalogService
+
+### Service Metadata
+
+http://localhost:43405/odata/v4/CatalogService/$metadata
+
+### To Get Purchase Order Set Details
+
+http://localhost:43405/odata/v4/CatalogService/PurchaseOrderSet
+
+### Skip & Top Call
+http://localhost:43405/odata/v4/CatalogService/PurchaseOrderSet?$skip=0&$top=30
+
+### Single Product URI
+http://localhost:43405/odata/v4/CatalogService/ProductView('74867AD200E41EDBA5D8B06B26EB4052')
+
+
+### POST URI
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json 
+
+{
+       "nameFirst": "Rajasekhar",
+        "nameMiddle": "I",
+        "nameLast": "Malladi",
+        "nameInitials": "M",
+        "sex": "M",
+        "salaryAmount": 100000
+}
+
+
+### Get the Purchase Order Details
+http://localhost:4004/odata/v4/CatalogService/PurchaseOrder
+
+### Get The Purchse Order Details for V2 Version Data.
+http://localhost:4004/v2/odata/v4/CatalogService/PurchaseOrder
+
+### Get the Single Purchase Order Record
+http://localhost:4004/odata/v4/CatalogService/PurchaseOrder/74867AD200E41EDBA5D8B0C98DC28052
+
+### Boost Action
+POST http://localhost:4004/odata/v4/CatalogService/PurchaseOrder/74867AD200E41EDBA5D8B0C98DC28052/boost
+Content-Type: application/json
+
+{
+
+}
+
+### Largest PO Order Function
+http://localhost:4004/odata/v4/CatalogService/PurchaseOrder/74867AD200E41EDBA5D8B0C98DC28052/largestOrder()
+
+### To Test The Read from custom Service
+http://localhost:4004/odata/v4/demoservice/ReadEmpSrv
+
+### To Test the Read Call
+http://localhost:4004/odata/v4/demoservice/
+
+###POST to insert data
+POST http://localhost:4004/odata/v4/demoservice/InserEmployeeSrv
+Content-Type: application/json
+
+{
+      "ID": "02BD2137-0890-1EEA-A6C2-BB55C198E8DB",
+      "nameFirst": "Happy",
+      "nameMiddle": null,
+      "nameLast": "New Data",
+      "nameInitials": null,
+      "sex": "F",
+      "language": "E",
+      "phoneNumber": null,
+//      "email": "nongyui@ey.com",
+      "loginName": "NONBGYUI",
+      "Currency_code": "USD",
+      "salaryAmount": 95000,
+      "accountNumber": "9988776655",
+      "bankId": "12100035",
+      "bankName": "My Bank of San Francisco"
+}
+
+###POST to insert data
+PATCH http://localhost:4004/odata/v4/demoservice/UpdateEmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C198E8DB
+Content-Type: application/json
+
+{
+      "nameFirst":"Nong Yui",
+    "nameLast": "Sober Sobti"
+}
+
+###READ the insert Data
+http://localhost:4004/odata/v4/demoservice/ReadEmpSrv/02BD2137-0890-1EEA-A6C2-BB55C198E8DB
+
+###DELETE Employee
+DELETE http://localhost:4004/odata/v4/demoservice/DeleteEmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C198E8DB
+Content-Type: application/json
