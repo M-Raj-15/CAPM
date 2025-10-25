@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@cap-js-community/odata-v2-adapter": "^1.15.4",
+    "@cap-js/hana": "^2",
     "@sap/cds": "^9",
     "@sap/cds-dk": "^9.3.2",
     "express": "^4"
@@ -14,8 +15,8 @@
   "devDependencies": {
     "@cap-js/sqlite": "^2.0.3",
     "@sap/ux-specification": "^1.102.15",
-    "sqlite3": "^5.0.4",
-    "cds-plugin-ui5": "^0.13.0"
+    "cds-plugin-ui5": "^0.13.0",
+    "sqlite3": "^5.0.4"
   },
   "scripts": {
     "start": "cds-serve",
@@ -26,5 +27,12 @@
   ],
   "sapux": [
     "app/po.list"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "[hybrid]": {
+        "db": "hana"
+      }
+    }
+  }
 }
