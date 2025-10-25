@@ -20,6 +20,8 @@
   },
   "scripts": {
     "start": "cds-serve",
+    "deploy": "cds deploy --to hana:naruto --profile hybrid",
+    "run": "cds watch --profile hybrid",
     "watch-po.list": "cds watch --open p2p.po.list/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "workspaces": [
